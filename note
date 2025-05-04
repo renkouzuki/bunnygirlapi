@@ -1,0 +1,5 @@
+$i = 1; Get-ChildItem -File | Sort-Object Name | ForEach-Object {
+	$ext = $_.Extension
+	Rename-Item $_ -NewName ("$i$ext")
+	$i++
+}
