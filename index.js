@@ -19,7 +19,7 @@ app.use(
 
 const port = process.env.port || 3000;
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
   const { windowWidth } = req.query;
